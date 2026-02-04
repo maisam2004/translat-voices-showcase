@@ -1,4 +1,4 @@
-# 🎙️ VoiceAir - Universal Voice Translator
+# 🎙️ VoisAir - Universal Voice Translator
 
 > A comprehensive FastAPI-based real-time voice translation platform with advanced speech-to-text, text translation, text-to-speech capabilities, PDF tools, and e-commerce marketplace integration.
 
@@ -23,6 +23,7 @@
 ## ✨ Features
 
 ### 🎤 Core Translation Features
+
 - **Real-time Voice Translation**: Duplex mode with simultaneous mic & speaker translation
 - **Audio File Transcription**: Upload audio/video files (supports 50+ formats)
 - **Text Translation**: 50+ languages with auto-detection and regional accents
@@ -31,6 +32,7 @@
 - **Translation History**: Save and manage up to 50 translation sessions with audio playback
 
 ### 📄 PDF Tools Suite
+
 - **PDF Merge**: Combine multiple PDFs into one
 - **PDF Compress**: Reduce file size while maintaining quality
 - **PDF to Images**: Export pages as high-resolution images (72-250 DPI)
@@ -42,6 +44,7 @@
 - **Word to PDF**: Convert DOCX files to PDF
 
 ### 💳 Subscription & Monetization
+
 - **Stripe Integration**: Free, Creator ($9.99/mo), Business ($29.99/mo) plans
 - **Credit System**: Usage-based limits for text, audio, and API calls
 - **API Access**: RESTful API with key-based authentication (Business plan)
@@ -49,6 +52,7 @@
 - **Payment Receipts**: Automatic email receipts with detailed breakdowns
 
 ### 🛒 E-Commerce Marketplace
+
 - **18 Categories**: Travel (8) + E-commerce (10) including electronics, fashion, beauty
 - **Deal Management**: Featured deals, discount codes, multi-image carousels
 - **Click Tracking**: Analytics for affiliate conversions
@@ -56,6 +60,7 @@
 - **Responsive Design**: Tailwind CSS with Material Icons
 
 ### 🔐 Authentication & Security
+
 - **Google OAuth 2.0**: One-click login with profile sync
 - **JWT Authentication**: Secure session management with token refresh
 - **API Key Management**: Generate, list, and revoke API keys
@@ -63,6 +68,7 @@
 - **Rate Limiting**: SlowAPI-based protection (10-20 req/min per endpoint)
 
 ### 📊 Admin Features
+
 - **SQLAdmin Dashboard**: Manage users, subscriptions, payments, offers, and support tickets
 - **AI Content Agent**: Automated blog post and travel offer creation
 - **Email Notifications**: Support request alerts and payment confirmations
@@ -74,70 +80,78 @@
 ## 🛠️ Tech Stack
 
 ### Backend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **FastAPI** | 0.119.0 | Modern async web framework |
-| **SQLAlchemy** | 2.0.44 | ORM for database interactions |
-| **PostgreSQL** | 16+ | Production database (Heroku) |
-| **SQLite** | 3+ | Local development database |
-| **Alembic** | 1.18.1 | Database migration management |
-| **Pydantic** | 2.12.0 | Data validation and serialization |
-| **Uvicorn** | 0.37.0 | ASGI server |
-| **Gunicorn** | 21.2.0 | Production process manager |
+
+| Technology           | Version | Purpose                           |
+| -------------------- | ------- | --------------------------------- |
+| **FastAPI**    | 0.119.0 | Modern async web framework        |
+| **SQLAlchemy** | 2.0.44  | ORM for database interactions     |
+| **PostgreSQL** | 16+     | Production database (Heroku)      |
+| **SQLite**     | 3+      | Local development database        |
+| **Alembic**    | 1.18.1  | Database migration management     |
+| **Pydantic**   | 2.12.0  | Data validation and serialization |
+| **Uvicorn**    | 0.37.0  | ASGI server                       |
+| **Gunicorn**   | 21.2.0  | Production process manager        |
 
 ### Authentication & Security
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **python-jose** | 3.5.0 | JWT token handling |
-| **PyJWT** | 2.10.1 | JSON Web Tokens |
-| **passlib** | 1.7.4 | Password hashing (bcrypt) |
-| **cryptography** | 46.0.2 | Encryption utilities |
-| **SlowAPI** | 0.1.9 | Rate limiting middleware |
+
+| Technology             | Version | Purpose                   |
+| ---------------------- | ------- | ------------------------- |
+| **python-jose**  | 3.5.0   | JWT token handling        |
+| **PyJWT**        | 2.10.1  | JSON Web Tokens           |
+| **passlib**      | 1.7.4   | Password hashing (bcrypt) |
+| **cryptography** | 46.0.2  | Encryption utilities      |
+| **SlowAPI**      | 0.1.9   | Rate limiting middleware  |
 
 ### Payment & Subscriptions
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **Stripe** | 13.0.1 | Payment processing & webhooks |
+
+| Technology       | Version | Purpose                       |
+| ---------------- | ------- | ----------------------------- |
+| **Stripe** | 13.0.1  | Payment processing & webhooks |
 
 ### AI & Translation Services
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **AssemblyAI** | Latest | Speech-to-text transcription |
-| **Google Cloud Translate** | 3.15.3 | Text translation (50+ languages) |
-| **Azure Speech Services** | - | Neural text-to-speech (TTS) |
-| **gTTS** | 2.5.4 | Fallback TTS engine |
+
+| Technology                       | Version | Purpose                          |
+| -------------------------------- | ------- | -------------------------------- |
+| **AssemblyAI**             | Latest  | Speech-to-text transcription     |
+| **Google Cloud Translate** | 3.15.3  | Text translation (50+ languages) |
+| **Azure Speech Services**  | -       | Neural text-to-speech (TTS)      |
+| **gTTS**                   | 2.5.4   | Fallback TTS engine              |
 
 ### PDF Processing
-| Technology | Version | Purpose |
-|------------|---------|---------|
+
+| Technology               | Version | Purpose                              |
+| ------------------------ | ------- | ------------------------------------ |
 | **PyMuPDF (fitz)** | 1.24.0+ | PDF parsing, rendering, manipulation |
-| **img2pdf** | 0.5.0+ | Image-to-PDF conversion |
-| **Pillow** | 10.0.0+ | Image processing |
-| **python-docx** | 1.1.2 | DOCX creation |
-| **mammoth** | 1.4.19 | DOCX to HTML conversion |
-| **playwright** | 1.44.0 | HTML to PDF (headless browser) |
+| **img2pdf**        | 0.5.0+  | Image-to-PDF conversion              |
+| **Pillow**         | 10.0.0+ | Image processing                     |
+| **python-docx**    | 1.1.2   | DOCX creation                        |
+| **mammoth**        | 1.4.19  | DOCX to HTML conversion              |
+| **playwright**     | 1.44.0  | HTML to PDF (headless browser)       |
 
 ### Storage & Media
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **boto3** | 1.35.71 | AWS S3 integration for file storage |
-| **aiohttp** | 3.13.0 | Async HTTP client |
+
+| Technology        | Version | Purpose                             |
+| ----------------- | ------- | ----------------------------------- |
+| **boto3**   | 1.35.71 | AWS S3 integration for file storage |
+| **aiohttp** | 3.13.0  | Async HTTP client                   |
 
 ### Frontend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **Jinja2** | 3.1.6 | Server-side templating |
-| **Bootstrap** | 5.3.8 | Responsive UI framework |
-| **Tailwind CSS** | 3.4+ | Utility-first CSS (deals page) |
-| **Font Awesome** | 6.5+ | Icon library |
-| **Material Icons** | - | Google Material Design icons |
-| **Vanilla JavaScript** | ES6+ | Client-side interactivity |
+
+| Technology                   | Version | Purpose                        |
+| ---------------------------- | ------- | ------------------------------ |
+| **Jinja2**             | 3.1.6   | Server-side templating         |
+| **Bootstrap**          | 5.3.8   | Responsive UI framework        |
+| **Tailwind CSS**       | 3.4+    | Utility-first CSS (deals page) |
+| **Font Awesome**       | 6.5+    | Icon library                   |
+| **Material Icons**     | -       | Google Material Design icons   |
+| **Vanilla JavaScript** | ES6+    | Client-side interactivity      |
 
 ### Admin & Monitoring
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **SQLAdmin** | 0.16.1 | Database admin interface |
-| **WTForms** | 3.1.2 | Form validation in admin |
+
+| Technology         | Version | Purpose                  |
+| ------------------ | ------- | ------------------------ |
+| **SQLAdmin** | 0.16.1  | Database admin interface |
+| **WTForms**  | 3.1.2   | Form validation in admin |
 
 ---
 
@@ -241,6 +255,7 @@ translat-voices/
 ### Key API Endpoints
 
 #### Translation Services
+
 ```
 POST   /transcribe            # Upload audio file for transcription
 POST   /translate             # Translate text between languages
@@ -250,6 +265,7 @@ GET    /get-realtime-token    # Get AssemblyAI token for live transcription
 ```
 
 #### PDF Tools
+
 ```
 GET    /api/pdf/usage-stats   # Get user's PDF quota
 POST   /api/pdf/merge         # Merge multiple PDFs
@@ -264,6 +280,7 @@ POST   /api/pdf/visa-fix      # Optimize photo for visa requirements
 ```
 
 #### User & Subscription
+
 ```
 GET    /profile               # User dashboard
 POST   /profile/cancel-subscription  # Cancel Stripe subscription
@@ -275,6 +292,7 @@ GET    /api/webhooks          # List webhooks
 ```
 
 #### Transcription Jobs (Async)
+
 ```
 POST   /api/transcribe/start  # Start background transcription job
 GET    /api/transcribe/jobs   # List user's transcription jobs
@@ -282,6 +300,7 @@ GET    /api/transcribe/jobs/{id}  # Get job status & result
 ```
 
 #### Admin API (Requires Admin JWT)
+
 ```
 POST   /api/admin/blog-posts  # Create blog post via AI agent
 GET    /api/admin/blog-posts  # List blog posts
@@ -290,6 +309,7 @@ GET    /api/admin/travel-offers  # List travel offers
 ```
 
 #### Public Pages
+
 ```
 GET    /                      # Redirect to /realtime
 GET    /realtime              # Main translation interface
@@ -320,86 +340,87 @@ GET    /about                 # About page
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/maisam2004/translat-voices.git
    cd translat-voices
    ```
-
 2. **Create virtual environment**
+
    ```bash
    python -m venv venv_new
-   
+
    # Windows
    venv_new\Scripts\activate
-   
+
    # macOS/Linux
    source venv_new/bin/activate
    ```
-
 3. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
-   
+
    # Install Playwright browsers for PDF conversion
    playwright install chromium
    ```
-
 4. **Set up environment variables**
-   
+
    Create a `.env` file in the project root:
+
    ```bash
    # Copy template
    cp .env.template .env
    ```
-   
+
    **Edit `.env` and configure:**
-   
+
    ```ini
    # Environment
    ENVIRONMENT=development
    PRODUCTION_DOMAIN=http://localhost:8000
-   
+
    # Security
    JWT_SECRET_KEY=your_generated_secret_key_here  # Generate: python -c "import secrets; print(secrets.token_urlsafe(32))"
-   
+
    # Database (auto-created SQLite locally)
    # DATABASE_URL is auto-set by Heroku in production
-   
+
    # Stripe (get from https://dashboard.stripe.com/apikeys)
    STRIPE_SECRET_KEY=sk_test_your_test_key
    STRIPE_PUBLISHABLE_KEY=pk_test_your_test_key
    STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
-   
+
    # Google OAuth (https://console.cloud.google.com/)
    GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
    GOOGLE_CLIENT_SECRET=GOCSPX-your_secret
    GOOGLE_REDIRECT_URI=http://localhost:8000/auth/callback
-   
+
    # API Keys for Services
    ASSEMBLYAI_API_KEY=your_assemblyai_key          # https://app.assemblyai.com/
    GOOGLE_API_KEY=your_google_translate_key        # Google Cloud Translation API
    AZURE_API_KEY=your_azure_speech_key             # Azure Speech Services
    AZURE_REGION=eastus                             # Azure region
-   
+
    # AWS S3 (optional, for file storage)
    AWS_ACCESS_KEY_ID=your_aws_key
    AWS_SECRET_ACCESS_KEY=your_aws_secret
    AWS_S3_BUCKET_NAME=your_bucket_name
    AWS_REGION=us-east-1
    ```
-
 5. **Initialize database**
+
    ```bash
    # Create tables from models
    python -c "from database import engine; from models import Base; Base.metadata.create_all(bind=engine)"
    ```
-
 6. **Run development server**
+
    ```bash
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
-
 7. **Access the application**
+
    - **Main App**: http://localhost:8000
    - **Translator**: http://localhost:8000/realtime
    - **PDF Tools**: http://localhost:8000/pdf-tools
@@ -422,6 +443,7 @@ All API endpoints require authentication via one of:
 ### Example: Translation API
 
 **Request:**
+
 ```bash
 curl -X POST http://localhost:8000/translate \
   -H "X-API-Key: your_api_key_here" \
@@ -431,6 +453,7 @@ curl -X POST http://localhost:8000/translate \
 ```
 
 **Response:**
+
 ```json
 {
   "translated_text": "¡Hola, mundo!",
@@ -443,6 +466,7 @@ curl -X POST http://localhost:8000/translate \
 ### Example: Text-to-Speech
 
 **Request:**
+
 ```bash
 curl -X POST http://localhost:8000/tts \
   -H "X-API-Key: your_api_key_here" \
@@ -456,6 +480,7 @@ curl -X POST http://localhost:8000/tts \
 ### Example: Transcription Job (Async)
 
 **Start Job:**
+
 ```bash
 curl -X POST http://localhost:8000/api/transcribe/start \
   -H "X-API-Key: your_api_key_here" \
@@ -463,6 +488,7 @@ curl -X POST http://localhost:8000/api/transcribe/start \
 ```
 
 **Response:**
+
 ```json
 {
   "job_id": "uuid-here",
@@ -472,12 +498,14 @@ curl -X POST http://localhost:8000/api/transcribe/start \
 ```
 
 **Check Status:**
+
 ```bash
 curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
   -H "X-API-Key: your_api_key_here"
 ```
 
 **Response:**
+
 ```json
 {
   "id": "uuid-here",
@@ -492,23 +520,23 @@ curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
 
 ### Rate Limits (per endpoint)
 
-| Endpoint | Free Plan | Creator Plan | Business Plan |
-|----------|-----------|--------------|---------------|
-| `/translate` | 20/min | 20/min | 20/min |
-| `/tts` | 15/min | 15/min | 15/min |
-| `/transcribe` | 10/min | 10/min | 10/min |
-| `/api/pdf/*` | 5/min | 10/min | 20/min |
+| Endpoint        | Free Plan | Creator Plan | Business Plan |
+| --------------- | --------- | ------------ | ------------- |
+| `/translate`  | 20/min    | 20/min       | 20/min        |
+| `/tts`        | 15/min    | 15/min       | 15/min        |
+| `/transcribe` | 10/min    | 10/min       | 10/min        |
+| `/api/pdf/*`  | 5/min     | 10/min       | 20/min        |
 
 ### Monthly Quotas
 
-| Resource | Free | Creator | Business |
-|----------|------|---------|----------|
-| Text translation | 10,000 chars | 2M chars | Unlimited |
-| Audio transcription | 5 min | 30 min | 150 min |
-| TTS generation | 1,000 chars | 100K chars | Unlimited |
-| PDF processing | 10 MB/day | 100 MB/day | Unlimited |
-| API requests | ❌ | ❌ | 10,000/mo |
-| Translation history | 20 items | 50 items | 50 items |
+| Resource            | Free         | Creator    | Business  |
+| ------------------- | ------------ | ---------- | --------- |
+| Text translation    | 10,000 chars | 2M chars   | Unlimited |
+| Audio transcription | 5 min        | 30 min     | 150 min   |
+| TTS generation      | 1,000 chars  | 100K chars | Unlimited |
+| PDF processing      | 10 MB/day    | 100 MB/day | Unlimited |
+| API requests        | ❌           | ❌         | 10,000/mo |
+| Translation history | 20 items     | 50 items   | 50 items  |
 
 ---
 
@@ -525,57 +553,58 @@ curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
 ### Deployment Steps
 
 1. **Login to Heroku**
+
    ```bash
    heroku login
    ```
-
 2. **Create a new Heroku app**
+
    ```bash
    heroku create your-app-name
-   # Example: heroku create voiceair-translator
+   # Example: heroku create voisair-translator
    ```
-
 3. **Add PostgreSQL addon**
+
    ```bash
    # Essential plan (~$5/month, required for production)
    heroku addons:create heroku-postgresql:essential-0 -a your-app-name
    ```
-
 4. **Set environment variables**
+
    ```bash
    # Generate and set JWT secret
    heroku config:set JWT_SECRET_KEY=$(python -c "import secrets; print(secrets.token_urlsafe(32))")
-   
+
    # Set environment to production
    heroku config:set ENVIRONMENT=production
-   
+
    # Set your production domain (example: voisair.com)
    heroku config:set PRODUCTION_DOMAIN=https://your-app-name.herokuapp.com
-   
+
    # Stripe keys (use LIVE keys for production)
    heroku config:set STRIPE_SECRET_KEY=sk_live_your_key_here
    heroku config:set STRIPE_PUBLISHABLE_KEY=pk_live_your_key_here
    heroku config:set STRIPE_WEBHOOK_SECRET=whsec_your_secret_here
-   
+
    # Google OAuth
    heroku config:set GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
    heroku config:set GOOGLE_CLIENT_SECRET=your_client_secret
    heroku config:set GOOGLE_REDIRECT_URI=https://your-app-name.herokuapp.com/auth/callback
-   
+
    # API Keys for Translation Services
    heroku config:set ASSEMBLYAI_API_KEY=your_key_here
    heroku config:set GOOGLE_API_KEY=your_key_here
    heroku config:set AZURE_API_KEY=your_key_here
    heroku config:set AZURE_REGION=eastus
-   
+
    # AWS S3 (for file storage)
    heroku config:set AWS_ACCESS_KEY_ID=your_aws_key
    heroku config:set AWS_SECRET_ACCESS_KEY=your_aws_secret
    heroku config:set AWS_S3_BUCKET_NAME=your_bucket_name
    heroku config:set AWS_REGION=us-east-1
    ```
-
 5. **Update Google OAuth redirect URI**
+
    - Go to [Google Cloud Console](https://console.cloud.google.com/)
    - Navigate to **APIs & Services > Credentials**
    - Edit your OAuth 2.0 Client ID
@@ -584,8 +613,8 @@ curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
      https://your-app-name.herokuapp.com/auth/callback
      ```
    - Save changes
-
 6. **Update Stripe webhook endpoint**
+
    - Go to [Stripe Dashboard Webhooks](https://dashboard.stripe.com/webhooks)
    - Click **Add endpoint**
    - URL: `https://your-app-name.herokuapp.com/stripe/webhook`
@@ -600,36 +629,36 @@ curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
      ```bash
      heroku config:set STRIPE_WEBHOOK_SECRET=whsec_your_secret
      ```
-
 7. **Deploy to Heroku**
+
    ```bash
    # Add Heroku remote (if not already added)
    git remote add heroku https://git.heroku.com/your-app-name.git
-   
+
    # Commit any pending changes
    git add .
    git commit -m "Prepare for Heroku deployment"
-   
+
    # Push to Heroku
    git push heroku main
    ```
-
 8. **Initialize database tables**
+
    ```bash
    heroku run python -c "from database import engine; from models import Base; Base.metadata.create_all(bind=engine)"
    ```
-
 9. **Install Playwright browsers (for PDF conversion)**
+
    ```bash
    heroku run playwright install chromium
    ```
-
 10. **Set up an admin user (optional)**
+
     ```bash
     heroku run python set_admin.py your_email@example.com
     ```
-
 11. **Open your app**
+
     ```bash
     heroku open
     ```
@@ -650,26 +679,31 @@ curl -X GET "http://localhost:8000/api/transcribe/jobs/uuid-here" \
 ### Monitoring & Maintenance
 
 **View logs:**
+
 ```bash
 heroku logs --tail -a your-app-name
 ```
 
 **Check database status:**
+
 ```bash
 heroku pg:info
 ```
 
 **Run database migrations:**
+
 ```bash
 heroku run alembic upgrade head
 ```
 
 **Restart dynos:**
+
 ```bash
 heroku restart
 ```
 
 **Scale dynos (if needed):**
+
 ```bash
 # Upgrade to Standard dyno for better performance
 heroku ps:scale web=1:standard-1x
@@ -681,53 +715,55 @@ heroku ps:scale web=1:standard-1x
 
 ## 🔧 Environment Variables Reference
 
-| Variable | Required | Description | Example | Where to Get |
-|----------|----------|-------------|---------|--------------|
-| `DATABASE_URL` | Auto | PostgreSQL connection string | `postgresql://user:pass@host/db` | Auto-set by Heroku PostgreSQL addon |
-| `JWT_SECRET_KEY` | ✅ | Secret for JWT token signing | `random_32_char_string` | Generate: `python -c "import secrets; print(secrets.token_urlsafe(32))"` |
-| `ENVIRONMENT` | ✅ | Deployment environment | `development` or `production` | Set manually |
-| `PRODUCTION_DOMAIN` | ✅ | Your app's public URL | `https://voisair.com` | Your production domain |
-| **Stripe** |
-| `STRIPE_SECRET_KEY` | ✅ | Stripe API secret key | `sk_live_...` or `sk_test_...` | [Stripe Dashboard > API Keys](https://dashboard.stripe.com/apikeys) |
-| `STRIPE_PUBLISHABLE_KEY` | ✅ | Stripe public key | `pk_live_...` or `pk_test_...` | [Stripe Dashboard > API Keys](https://dashboard.stripe.com/apikeys) |
-| `STRIPE_WEBHOOK_SECRET` | ✅ | Stripe webhook signing secret | `whsec_...` | [Stripe Dashboard > Webhooks](https://dashboard.stripe.com/webhooks) |
-| **Google OAuth** |
-| `GOOGLE_CLIENT_ID` | ✅ | OAuth 2.0 client ID | `123.apps.googleusercontent.com` | [Google Cloud Console > Credentials](https://console.cloud.google.com/apis/credentials) |
-| `GOOGLE_CLIENT_SECRET` | ✅ | OAuth 2.0 client secret | `GOCSPX-...` | [Google Cloud Console > Credentials](https://console.cloud.google.com/apis/credentials) |
-| `GOOGLE_REDIRECT_URI` | ✅ | OAuth callback URL | `https://app.com/auth/callback` | Your domain + `/auth/callback` |
-| **Translation APIs** |
-| `ASSEMBLYAI_API_KEY` | ✅ | Speech-to-text API key | `abc123...` | [AssemblyAI Dashboard](https://app.assemblyai.com/) |
-| `GOOGLE_API_KEY` | ⚠️ | Google Translate API key | `AIza...` | [Google Cloud Console > APIs](https://console.cloud.google.com/) |
-| `AZURE_API_KEY` | ⚠️ | Azure Speech Services key | `abc123...` | [Azure Portal > Speech Services](https://portal.azure.com/) |
-| `AZURE_REGION` | ⚠️ | Azure service region | `eastus` or `westeurope` | Same as your Azure Speech resource |
-| **AWS S3 (File Storage)** |
-| `AWS_ACCESS_KEY_ID` | ⚠️ | AWS IAM access key | `AKIA...` | [AWS IAM Console](https://console.aws.amazon.com/iam/) |
-| `AWS_SECRET_ACCESS_KEY` | ⚠️ | AWS IAM secret key | `abc123...` | [AWS IAM Console](https://console.aws.amazon.com/iam/) |
-| `AWS_S3_BUCKET_NAME` | ⚠️ | S3 bucket name | `my-app-storage` | Your S3 bucket name |
-| `AWS_REGION` | ⚠️ | AWS region | `us-east-1` | Your S3 bucket region |
+| Variable                        | Required | Description                   | Example                            | Where to Get                                                                            |
+| ------------------------------- | -------- | ----------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------- |
+| `DATABASE_URL`                | Auto     | PostgreSQL connection string  | `postgresql://user:pass@host/db` | Auto-set by Heroku PostgreSQL addon                                                     |
+| `JWT_SECRET_KEY`              | ✅       | Secret for JWT token signing  | `random_32_char_string`          | Generate:`python -c "import secrets; print(secrets.token_urlsafe(32))"`               |
+| `ENVIRONMENT`                 | ✅       | Deployment environment        | `development` or `production`  | Set manually                                                                            |
+| `PRODUCTION_DOMAIN`           | ✅       | Your app's public URL         | `https://voisair.com`            | Your production domain                                                                  |
+| **Stripe**                |          |                               |                                    |                                                                                         |
+| `STRIPE_SECRET_KEY`           | ✅       | Stripe API secret key         | `sk_live_...` or `sk_test_...` | [Stripe Dashboard &gt; API Keys](https://dashboard.stripe.com/apikeys)                     |
+| `STRIPE_PUBLISHABLE_KEY`      | ✅       | Stripe public key             | `pk_live_...` or `pk_test_...` | [Stripe Dashboard &gt; API Keys](https://dashboard.stripe.com/apikeys)                     |
+| `STRIPE_WEBHOOK_SECRET`       | ✅       | Stripe webhook signing secret | `whsec_...`                      | [Stripe Dashboard &gt; Webhooks](https://dashboard.stripe.com/webhooks)                    |
+| **Google OAuth**          |          |                               |                                    |                                                                                         |
+| `GOOGLE_CLIENT_ID`            | ✅       | OAuth 2.0 client ID           | `123.apps.googleusercontent.com` | [Google Cloud Console &gt; Credentials](https://console.cloud.google.com/apis/credentials) |
+| `GOOGLE_CLIENT_SECRET`        | ✅       | OAuth 2.0 client secret       | `GOCSPX-...`                     | [Google Cloud Console &gt; Credentials](https://console.cloud.google.com/apis/credentials) |
+| `GOOGLE_REDIRECT_URI`         | ✅       | OAuth callback URL            | `https://app.com/auth/callback`  | Your domain +`/auth/callback`                                                         |
+| **Translation APIs**      |          |                               |                                    |                                                                                         |
+| `ASSEMBLYAI_API_KEY`          | ✅       | Speech-to-text API key        | `abc123...`                      | [AssemblyAI Dashboard](https://app.assemblyai.com/)                                        |
+| `GOOGLE_API_KEY`              | ⚠️     | Google Translate API key      | `AIza...`                        | [Google Cloud Console &gt; APIs](https://console.cloud.google.com/)                        |
+| `AZURE_API_KEY`               | ⚠️     | Azure Speech Services key     | `abc123...`                      | [Azure Portal &gt; Speech Services](https://portal.azure.com/)                             |
+| `AZURE_REGION`                | ⚠️     | Azure service region          | `eastus` or `westeurope`       | Same as your Azure Speech resource                                                      |
+| **AWS S3 (File Storage)** |          |                               |                                    |                                                                                         |
+| `AWS_ACCESS_KEY_ID`           | ⚠️     | AWS IAM access key            | `AKIA...`                        | [AWS IAM Console](https://console.aws.amazon.com/iam/)                                     |
+| `AWS_SECRET_ACCESS_KEY`       | ⚠️     | AWS IAM secret key            | `abc123...`                      | [AWS IAM Console](https://console.aws.amazon.com/iam/)                                     |
+| `AWS_S3_BUCKET_NAME`          | ⚠️     | S3 bucket name                | `my-app-storage`                 | Your S3 bucket name                                                                     |
+| `AWS_REGION`                  | ⚠️     | AWS region                    | `us-east-1`                      | Your S3 bucket region                                                                   |
 
 **Legend:**
+
 - ✅ = **Required** for basic functionality
 - ⚠️ = **Optional** but highly recommended for full feature set
 
 ### API Service Setup Links
 
 1. **AssemblyAI** (Speech-to-Text)
+
    - Sign up: https://www.assemblyai.com/
    - Get API key from dashboard
    - Free tier: 100 min/month
-
 2. **Google Cloud Translation API**
+
    - Enable: https://console.cloud.google.com/apis/library/translate.googleapis.com
    - Create credentials: API Key
    - Pricing: $20 per 1M chars
-
 3. **Azure Speech Services**
+
    - Create resource: https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices
    - Copy key and region from resource overview
    - Free tier: 5 audio hours/month
-
 4. **AWS S3** (File Storage)
+
    - Create bucket: https://s3.console.aws.amazon.com/s3/
    - Create IAM user with `AmazonS3FullAccess` policy
    - Generate access keys
@@ -737,6 +773,7 @@ heroku ps:scale web=1:standard-1x
 ## 🔐 Security Best Practices
 
 ### Environment Security
+
 - ✅ **NEVER** commit `.env` to Git (included in `.gitignore`)
 - ✅ Use different API keys for development vs production
 - ✅ Rotate secrets regularly (every 90 days)
@@ -744,6 +781,7 @@ heroku ps:scale web=1:standard-1x
 - ✅ Enable 2FA on all service accounts (Stripe, Google, AWS)
 
 ### Application Security
+
 - ✅ HTTPS enforced in production (`ENVIRONMENT=production`)
 - ✅ Secure cookies: `HttpOnly`, `SameSite=Lax`
 - ✅ Rate limiting on all endpoints (SlowAPI)
@@ -753,6 +791,7 @@ heroku ps:scale web=1:standard-1x
 - ✅ XSS protection (Jinja2 auto-escaping)
 
 ### User Data
+
 - ✅ Passwords hashed with bcrypt (if email/password auth used)
 - ✅ API keys stored as hashed values in database
 - ✅ User files stored on S3 with unique UUIDs
@@ -760,6 +799,7 @@ heroku ps:scale web=1:standard-1x
 - ✅ Temporary audio files cleaned up after 1 hour
 
 ### Monitoring
+
 ```bash
 # View security-related logs
 heroku logs --tail | grep -i "error\|failed\|unauthorized"
@@ -775,6 +815,7 @@ heroku logs --tail | grep "401\|403"
 ### Database Issues
 
 **Error: `could not connect to server`**
+
 ```bash
 # Check DATABASE_URL is set
 heroku config:get DATABASE_URL
@@ -787,6 +828,7 @@ heroku restart
 ```
 
 **Error: `relation "users" does not exist`**
+
 ```bash
 # Run migrations
 heroku run alembic upgrade head
@@ -798,11 +840,13 @@ heroku run python -c "from database import engine; from models import Base; Base
 ### Application Crashes
 
 **Error: `R10 - Boot timeout`**
+
 - Check `Procfile` is correct: `web: gunicorn main:app -k uvicorn.workers.UvicornWorker`
 - Increase timeout: `heroku config:set BOOT_TIMEOUT=120`
 - Check logs: `heroku logs --tail`
 
 **Error: `H12 - Request timeout`**
+
 - Large file uploads: Increase Gunicorn timeout in `Procfile`
 - Use async transcription endpoints (`/api/transcribe/start`) instead
 
@@ -823,6 +867,7 @@ grep "app.mount" main.py
 ### OAuth Redirect Errors
 
 **Error: `redirect_uri_mismatch`**
+
 1. Check `GOOGLE_REDIRECT_URI` matches production domain:
    ```bash
    heroku config:get GOOGLE_REDIRECT_URI
@@ -835,6 +880,7 @@ grep "app.mount" main.py
 ### Stripe Webhook Failures
 
 **Error: `No signatures found matching the expected signature`**
+
 ```bash
 # Verify webhook secret
 heroku config:get STRIPE_WEBHOOK_SECRET
@@ -846,11 +892,13 @@ stripe listen --forward-to localhost:8000/stripe/webhook
 ### PDF Processing Errors
 
 **Error: `Playwright not installed`**
+
 ```bash
 heroku run playwright install chromium
 ```
 
 **Error: `PDF file too large`**
+
 - Check user quota: `/api/pdf/usage-stats`
 - Increase limits in `auth/pdf_processor.py` (constants)
 
