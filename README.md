@@ -326,6 +326,33 @@ GET    /about                 # About page
 
 ---
 
+
+
+
+## 📸 Screenshots & Demo
+
+### Main Translation Interface
+
+![Translation Interface](screenshots/realtime-translator.png)
+
+### PDF Tools Dashboard
+
+![PDF Tools](screenshots/pdf-tools.png)
+
+### E-Commerce Marketplace
+
+![Marketplace](screenshots/deals-marketplace.png)
+
+### User Profile & API Keys
+
+![Profile Dashboard](screenshots/user-profile.png)
+
+
+### Admin page backend 
+
+![Profile Dashboard](screenshots/admin-panel.jpeg)
+
+
 ---
 
 ## 🚀 Quick Start (Local Development)
